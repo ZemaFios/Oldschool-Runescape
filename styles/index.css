@@ -200,6 +200,19 @@ li {
     margin-bottom: 20px;
 }
 
+.getting_started_card:nth-child(1) {
+    background-color: #2a2a2c;
+}
+.getting_started_card:nth-child(2) {
+    background-color: #333336;
+}
+.getting_started_card:nth-child(3) {
+    background-color: #3d3d41;
+}
+.getting_started_card:nth-child(4) {
+    background-color: #4e4e52;
+}
+
 .getting_started_card h3 {
     font-size: 2rem;
     color: white;
@@ -289,6 +302,22 @@ li {
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
+}
+
+.getting_started_card:nth-child(1) {
+    background-color: #2a2a2c;
+}
+
+.getting_started_card:nth-child(2) {
+    background-color: #333336;
+}
+
+.getting_started_card:nth-child(3) {
+    background-color: #3d3d41;
+}
+
+.getting_started_card:nth-child(4) {
+    background-color: #4e4e52;
 }
 
 .explore_card h3 {
