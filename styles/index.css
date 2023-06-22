@@ -33,7 +33,7 @@ body {
     margin: 20px;
 }
 
-.logo img{
+.logo img {
     width: 150px;
     height: 100px;
     z-index: 1;
@@ -158,3 +158,138 @@ li {
     color: #e5e0df;
     margin-bottom: 20px;
 }
+/* ====== GETTING STARTED ====== */
+.getting_started {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.getting_started h2 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.getting_started_grid {
+    display: grid;
+    margin-top: 20px;
+}
+
+.getting_started_content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.getting_started_card {
+    width: 100%;
+    height: 100%;
+    background-color: #3d3d42;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.getting_started_card h3 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.getting_started_card p {
+    color: #e5e0df;
+    margin-bottom: 30px;
+}
+/* ====== GETTING STARTED END ====== */
+
+/* ====== GAMEPLAY MECHANICS ====== */
+.gameplay_mechanics {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.gameplay_mechanics h2 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.gameplay_mechanics_grid {
+    display: grid;
+    margin-top: 20px;
+}
+
+.gameplay_mechanics_content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.gameplay_mechanics_card {
+    width: 100%;
+    height: 100%;
+    background-color: #3d3d42;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.gameplay_mechanics_card h3 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.gameplay_mechanics_card p {
+    color: #e5e0df;
+    margin-bottom: 30px;
+}
+/* ====== GAMEPLAY MECHANICS END ====== */
+
+/* ====== EXPLORE ====== */
+.explore {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: #050505;
+    border-radius: 10px;
+    margin-bottom: 100px;
+}
+
+.explore h2 {
+    font-size: 2.7rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.explore_grid {
+    display: grid;
+    margin-top: 20px;
+}
+
+.explore_content {
+    display: flex;
+    flex-direction: column;
+}
+
+.explore_card {
+    width: 100%;
+    height: 100%;
+    background-color: #3d3d42;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.explore_card h3 {
+    margin-bottom: 5px;
+    color: white;
+}
+
+.explore_card p {
+    margin-bottom: 30px;
+    color: #e5e0df;
+}
+/* ====== EXPLORE END ====== */
