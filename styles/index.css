@@ -13,6 +13,7 @@ html {
 
 body {
     font-size: 1.6rem;
+    background-color: #3c3838;
 }
 
 /* ====== NAVIGATION ====== */
@@ -105,3 +106,55 @@ li {
 }
 
 /* ====== NAVIGATION END ====== */
+
+/* ====== HERO ====== */
+.hero {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 45px;
+}
+
+.hero_grid {
+    display: grid;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.hero_content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.hero_content h1 {
+    color: white;
+    font-size: 4rem;
+}
+
+.hero_content p {
+    color: #e5e0df;
+    margin-bottom: 20px;
+    width: 100%;
+}
+/* ====== HERO END ====== */
+
+/* ====== WHAT IS RUNESCAPE ====== */
+.what_is_runescape {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.what_is_runescape h2 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+.what_is_runescape p {
+    color: #e5e0df;
+    margin-bottom: 20px;
+}
