@@ -104,7 +104,6 @@ li {
     padding: 20px;
     background-color: #141414e5;
 }
-
 /* ====== NAVIGATION END ====== */
 
 /* ====== HERO ====== */
@@ -141,23 +140,33 @@ li {
 }
 /* ====== HERO END ====== */
 
-/* ====== WHAT IS RUNESCAPE ====== */
-.what_is_runescape {
+/* ====== RUNESCAPE ====== */
+.runescape {
+    display: flex;
+    flex-direction: column;
+    background-color: #3d3d42;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.runescape h2 {
+    font-size: 2.7rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.runescape p {
+    margin-bottom: 30px;
+    color: #e5e0df;
+}
+
+.runescape_img {
     width: 100%;
     height: 100%;
-    padding: 20px;
 }
+/* ====== RUNESCAPE END ====== */
 
-.what_is_runescape h2 {
-    color: white;
-    font-size: 3rem;
-    margin-bottom: 5px;
-}
-
-.what_is_runescape p {
-    color: #e5e0df;
-    margin-bottom: 20px;
-}
 /* ====== GETTING STARTED ====== */
 .getting_started {
     width: 100%;
