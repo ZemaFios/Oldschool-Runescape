@@ -380,3 +380,166 @@ li {
     color: #e5e0df;
 }
 /* ====== QUESTING END ====== */
+
+/* ====== MEDIA QUERY ====== */
+@media (min-width: 900px) {
+
+    /* ====== NAVIGATION ====== */
+    .nav_bar {
+        background: none;
+    }
+
+    .nav_list {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        height: 110px;
+    }
+
+    li a:hover {
+        color: #dddd;
+    }
+
+    .nav_list>li:hover ul {
+        display: block;
+    }
+
+    .nav_list li ul li {
+        padding: 7px;
+        font-size: 1.5rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .logo {
+        z-index: 1;
+    }
+
+    /* ====== HERO ====== */
+
+    /* ====== GETTING STARTED & GAMEPLAY MECHANICS ====== */
+    .getting_started, .gameplay_mechanics {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    .getting_started_content, .gameplay_mechanics_content {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .getting_started h2, .gameplay_mechanics h2 {
+        font-size: 4rem;
+    }
+
+    .getting_started_card h3, .gameplay_mechanics_card h3 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .getting_started_card p, .gameplay_mechanics_card p {
+        font-size: 1.5rem;
+    }
+    
+    /* ====== EXPLORE ====== */
+    .explore {
+        max-width: 1600px;
+        margin: 0 auto;
+        margin-bottom: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .explore_content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .explore_card:nth-child(1) {
+        grid-area: 1 / 1 / 2 / 2;
+        background-color: #2a2a2c;
+        color: white;
+    }
+
+    .explore_card:nth-child(2) {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .explore_card:nth-child(3) {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .explore_card:nth-child(4) {
+        grid-area: 2 / 2 / 3 / 3;
+        background-color: #2a2a2c;
+    }
+
+    .explore h2 {
+        font-size: 4rem;
+    }
+
+    .explore_card h3 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .explore_card p {
+        font-size: 1.5rem;
+    }
+
+    /* ====== COMMUNITY ====== */
+    .community {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .community_content {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .community h2 {
+        font-size: 4rem;
+    }
+
+    .community p {
+        font-size: 1.5rem;
+    }
+
+    /* ====== QUESTING & RUNESCAPE ====== */
+    .questing, .runescape {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        max-width: 1600px;
+        margin: 0 auto;
+        margin-bottom: 100px;
+    }
+
+    .questing_text, .runescape_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 650px;
+        grid-area: 1 / 1 / 3 / 3;
+    }
+
+    .questing h2, .runescape h2 {
+        font-size: 4rem;
+    }
+
+    .questing p, .runescape p {
+        font-size: 1.5rem;
+    }
+
+    .questing_img, .runescape_img {
+        width: 800px;
+        grid-area: 1 / 3 / 3 / 4;
+    }
+}
