@@ -9,6 +9,7 @@
 html {
     font-family: 'Poppins', sans-serif;
     font-size: 0.625rem;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -110,33 +111,12 @@ li {
 .hero {
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    padding-top: 45px;
+    padding-top: 100px;
 }
 
-.hero_grid {
-    display: grid;
-    margin-top: 40px;
-    padding: 20px;
-}
-
-.hero_content {
-    display: flex;
-    flex-direction: column;
+.hero img {
     width: 100%;
-    height: 100%;
-}
-
-.hero_content h1 {
-    color: white;
-    font-size: 3.5rem;
-}
-
-.hero_content p {
-    color: #e5e0df;
-    margin-bottom: 20px;
-    width: 100%;
+    height: 500px;
 }
 /* ====== HERO END ====== */
 
@@ -304,22 +284,6 @@ li {
     margin-bottom: 20px;
 }
 
-.getting_started_card:nth-child(1) {
-    background-color: #2a2a2c;
-}
-
-.getting_started_card:nth-child(2) {
-    background-color: #333336;
-}
-
-.getting_started_card:nth-child(3) {
-    background-color: #3d3d41;
-}
-
-.getting_started_card:nth-child(4) {
-    background-color: #4e4e52;
-}
-
 .explore_card h3 {
     margin-bottom: 5px;
     color: white;
@@ -419,6 +383,12 @@ li {
     }
 
     /* ====== HERO ====== */
+    .hero img {
+        width: 100%;
+        height: 100vh;
+        padding-top: 10px;
+        padding-bottom: 100px;
+    }
 
     /* ====== GETTING STARTED & GAMEPLAY MECHANICS ====== */
     .getting_started, .gameplay_mechanics {
@@ -462,21 +432,10 @@ li {
     }
 
     .explore_card:nth-child(1) {
-        grid-area: 1 / 1 / 2 / 2;
         background-color: #2a2a2c;
-        color: white;
-    }
-
-    .explore_card:nth-child(2) {
-        grid-area: 1 / 2 / 2 / 3;
-    }
-
-    .explore_card:nth-child(3) {
-        grid-area: 2 / 1 / 3 / 2;
     }
 
     .explore_card:nth-child(4) {
-        grid-area: 2 / 2 / 3 / 3;
         background-color: #2a2a2c;
     }
 
