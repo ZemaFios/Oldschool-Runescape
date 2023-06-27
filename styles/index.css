@@ -56,6 +56,7 @@ a {
     background-color: #1f1f29d8;
     width: 100%;
     text-align: center;
+    gap: 30px;
 }
 
 li {
@@ -451,7 +452,6 @@ li {
     
     .nav_list {
         display: flex;
-        gap: 40px;
         justify-content: flex-end;
         align-items: center;
         height: 8%;
@@ -459,7 +459,7 @@ li {
     }
     
     li {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     li a:hover {
@@ -501,15 +501,14 @@ li {
         height: 100%;
         padding-bottom: 150px;
     }
-
     /* ====== INTRODUCTION & GAMEPLAY MECHANICS ====== */
     .introduction {
-        max-width: 1600px;
+        max-width: 1400px;
         margin: 0 auto;
     }
 
     .gameplay_mechanics {
-        max-width: 1600px;
+        max-width: 1400px;
         margin: 0 auto;
         margin-bottom: 100px;
     }
@@ -533,8 +532,8 @@ li {
     }
     
     /* ====== EXPLORE & PROGRESSION ====== */
-    .explore, .progression {
-        max-width: 1600px;
+    .explore {
+        max-width: 1400px;
         margin: 0 auto;
         margin-bottom: 200px;
         display: flex;
@@ -543,7 +542,7 @@ li {
     }
     
     .progression {
-        max-width: 1600px;
+        max-width: 1400px;
         margin: 0 auto;
         margin-bottom: 100px;
         display: flex;
@@ -572,6 +571,7 @@ li {
 
     .explore h2, .progression h2 {
         font-size: 4rem;
+        margin-bottom: 20px;
     }
 
     .explore_card h3, .progression_card h3 {
@@ -590,13 +590,14 @@ li {
     /* ====== COMMUNITY ====== */
     .community {
         padding: 20px;
+        max-width: 1400px;
+        margin: 0 auto;
     }
 
     .community_content {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(1, 1fr);
-        max-width: 1600px;
         margin: 0 auto;
     }
 
@@ -619,10 +620,14 @@ li {
     /* ====== QUESTING & RUNESCAPE ====== */
     .runescape {
         padding: 20px;
+        max-width: 1400px;
+        margin: 0 auto;
     }
 
     .questing {
         padding: 225px 20px 20px;
+        max-width: 1400px;
+        margin: 0 auto;
     }
 
     .questing_content, .runescape_content {
