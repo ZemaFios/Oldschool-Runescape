@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     margin: 0;
@@ -14,13 +15,13 @@ html {
 
 body {
     font-size: 1.6rem;
-    background-color: #3c3838;
+    background-color: #16100B;
 }
 
 /* ====== NAVIGATION ====== */
 .nav_bar {
     width: 100%;
-    height: 100px;
+    height: 10%;
     display: flex;
     position: fixed;
     justify-content: space-between;
@@ -28,16 +29,21 @@ body {
     background-color: #1f1f29d8;
 }
 
-.logo {
+.logo_mobil {
     display: flex;
     align-items: center;
-    margin: 20px;
 }
 
-.logo img {
+.logo_mobil img {
+    position: absolute;
+    left: 20px;
+    top: -10px;
     width: 150px;
     height: 100px;
-    z-index: 1;
+}
+
+.logo {
+    display: none;
 }
 
 a {
@@ -55,7 +61,6 @@ a {
 
 li {
     list-style: none;
-    letter-spacing: 2px;
     font-size: 2rem;
 }
 
@@ -72,7 +77,7 @@ li {
 .hamburger {
     display: block;
     cursor: pointer;
-    margin: 40px;
+    margin: 20px;
 }
 
 .bar {
@@ -111,19 +116,24 @@ li {
 .hero {
     width: 100%;
     height: 100%;
-    padding-top: 100px;
 }
 
 .hero img {
     width: 100%;
-    height: 500px;
+    height: 100%;
 }
 /* ====== HERO END ====== */
 
 /* ====== RUNESCAPE ====== */
 .runescape {
+    width: 100%;
+    height: 100%;
+    padding-top: 125px;
+}
+
+.runescape_content {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     background-color: #3d3d42;
     border-radius: 10px;
     padding: 20px;
@@ -131,13 +141,15 @@ li {
 }
 
 .runescape h2 {
+    font-family: 'Inknut Antiqua', serif;
     font-size: 2.7rem;
-    margin-bottom: 20px;
-    color: white;
+    line-height: 40px;
+    margin: 10px 0 30px;
+    color: #f8c880;
 }
 
 .runescape p {
-    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
     color: #e5e0df;
 }
 
@@ -148,31 +160,33 @@ li {
 /* ====== RUNESCAPE END ====== */
 
 /* ====== GETTING STARTED ====== */
-.getting_started {
+.introduction {
     width: 100%;
     height: 100%;
     padding: 20px;
 }
 
-.getting_started h2 {
-    color: white;
-    font-size: 3rem;
+.introduction h2 {
+    font-family: 'Inknut Antiqua', serif;
+    line-height: 30px;
+    color: #f8c880;
+    font-size: 3.5rem;
     margin-bottom: 20px;
-    padding-top: 125px;
+    padding-top: 80px;
 }
 
-.getting_started_grid {
+.introduction_grid {
     display: grid;
     margin-top: 20px;
 }
 
-.getting_started_content {
+.introduction_content {
     display: flex;
     flex-direction: column;
     margin-bottom: 100px;
 }
 
-.getting_started_card {
+.introduction_card {
     width: 100%;
     height: 100%;
     background-color: #3d3d42;
@@ -181,28 +195,31 @@ li {
     margin-bottom: 20px;
 }
 
-.getting_started_card:nth-child(1) {
+.introduction_card:nth-child(1) {
     background-color: #2a2a2c;
 }
-.getting_started_card:nth-child(2) {
+.introduction_card:nth-child(2) {
     background-color: #333336;
 }
-.getting_started_card:nth-child(3) {
+.introduction_card:nth-child(3) {
     background-color: #3d3d41;
 }
-.getting_started_card:nth-child(4) {
+.introduction_card:nth-child(4) {
     background-color: #4e4e52;
 }
 
-.getting_started_card h3 {
+.introduction_card h3 {
+    font-family: 'Inknut Antiqua', serif;
     font-size: 2rem;
+    line-height: 30px;
     color: white;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
-.getting_started_card p {
+.introduction_card p {
+    font-family: 'Montserrat', sans-serif;
     color: #e5e0df;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 /* ====== GETTING STARTED END ====== */
 
@@ -214,8 +231,10 @@ li {
 }
 
 .gameplay_mechanics h2 {
-    color: white;
-    font-size: 3rem;
+    font-family: 'Inknut Antiqua', serif;
+    line-height: 30px;
+    color: #f8c880;
+    font-size: 2.8rem;
     margin-bottom: 20px;
 }
 
@@ -239,14 +258,17 @@ li {
 }
 
 .gameplay_mechanics_card h3 {
+    font-family: 'Inknut Antiqua', serif;
     font-size: 2rem;
+    line-height: 30px;
     color: white;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .gameplay_mechanics_card p {
+    font-family: 'Montserrat', sans-serif;
     color: #e5e0df;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 /* ====== GAMEPLAY MECHANICS END ====== */
 
@@ -260,10 +282,11 @@ li {
 }
 
 .explore h2 {
-    font-size: 2.7rem;
-    margin-bottom: 20px;
-    padding-top: 125px;
-    color: white;
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 2.3rem;
+    line-height: 60px;
+    padding-top: 50px;
+    color: #f8c880;
 }
 
 .explore_grid {
@@ -286,12 +309,14 @@ li {
 }
 
 .explore_card h3 {
-    margin-bottom: 5px;
+    font-family: 'Inknut Antiqua', serif;
+    line-height: 30px;
+    margin-bottom: 10px;
     color: white;
 }
 
 .explore_card p {
-    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
     color: #e5e0df;
 }
 /* ====== EXPLORE END ====== */
@@ -300,25 +325,34 @@ li {
 .community {
     width: 100%;
     height: 100%;
-    padding: 20px;
     border-radius: 10px;
 }
 
 .community_content {
+    display: flex;
+    flex-direction: column-reverse;
     background-color: #3d3d42;
     border-radius: 10px;
     padding: 20px;
+    margin: 20px;
 }
 
 .community h2 {
+    font-family: 'Inknut Antiqua', serif;
     font-size: 2.7rem;
-    margin-bottom: 20px;
-    color: white;
+    line-height: 30px;
+    margin: 10px 0 20px;
+    color: #f8c880;
 }
 
 .community p {
+    font-family: 'Montserrat', sans-serif;
     color: #e5e0df;
-    margin-bottom: 20px;
+}
+
+.community_content img {
+    width: 100%;
+    height: 100%;
 }
 /* ====== COMMUNITY END ====== */
 
@@ -337,12 +371,15 @@ li {
 }
 
 .questing h2 {
-    font-size: 2.7rem;
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 2.5rem;
+    line-height: 50px;
     margin: 10px 0 20px;
-    color: white;
+    color: #f8c880;
 }
 
 .questing p {
+    font-family: 'Montserrat', sans-serif;
     color: #e5e0df;
 }
 /* ====== QUESTING END ====== */
@@ -357,10 +394,12 @@ li {
 }
 
 .progression h2 {
+    font-family: 'Inknut Antiqua', serif;
+    line-height: 30px;
     font-size: 2.7rem;
     margin-bottom: 20px;
-    padding-top: 125px;
-    color: white;
+    padding-top: 50px;
+    color: #f8c880;
 }
 
 .progression_grid {
@@ -383,12 +422,21 @@ li {
 }
 
 .progression_card h3 {
-    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Inknut Antiqua', serif;
+    line-height: 30px;
+    margin-bottom: 10px;
     color: white;
 }
 
+.progression_card img {
+    width: 10%;
+}
+
 .progression_card p {
-    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
     color: #e5e0df;
 }
 
@@ -401,13 +449,18 @@ li {
     .nav_bar {
         background: none;
     }
-
+    
     .nav_list {
         display: flex;
-        gap: 20px;
-        justify-content: center;
+        gap: 40px;
+        justify-content: flex-end;
         align-items: center;
-        height: 110px;
+        height: 8%;
+        padding-right: 50px;
+    }
+    
+    li {
+        font-size: 1.8rem;
     }
 
     li a:hover {
@@ -428,43 +481,55 @@ li {
     }
 
     .logo {
-        z-index: 1;
+        display: block;
+    }
+
+    .logo img {
+        position: absolute;
+        left: 20px;
+        top: -10px;
+        width: 150px;
+        height: 100px;
+    }
+
+    .logo_mobil {
+        display: none;
     }
 
     /* ====== HERO ====== */
     .hero img {
         width: 100%;
-        height: 100vh;
-        padding-top: 10px;
+        height: 100%;
         padding-bottom: 100px;
     }
 
     /* ====== GETTING STARTED & GAMEPLAY MECHANICS ====== */
-    .getting_started, .gameplay_mechanics {
+    .introduction, .gameplay_mechanics {
         max-width: 1600px;
         margin: 0 auto;
     }
 
-    .getting_started_content, .gameplay_mechanics_content {
+    .introduction_content, .gameplay_mechanics_content {
         flex-direction: row;
         gap: 20px;
     }
 
-    .getting_started h2, .gameplay_mechanics h2 {
+    .introduction h2, .gameplay_mechanics h2 {
         font-size: 4rem;
     }
 
-    .getting_started_card h3, .gameplay_mechanics_card h3 {
+    .introduction_card h3, .gameplay_mechanics_card h3 {
         font-size: 2.5rem;
         margin-bottom: 20px;
     }
 
-    .getting_started_card p, .gameplay_mechanics_card p {
+    .introduction_card p, .gameplay_mechanics_card p {
         font-size: 1.5rem;
     }
     
-    /* ====== EXPLORE ====== */
+    /* ====== EXPLORE & PROGRESSION ====== */
     .explore, .progression {
+        height: 100vh;
         max-width: 1600px;
         margin: 0 auto;
         margin-bottom: 100px;
@@ -505,15 +570,32 @@ li {
         font-size: 1.5rem;
     }
 
+    .progression_card img {
+        width: 7%;
+    }   
+
     /* ====== COMMUNITY ====== */
     .community {
-        max-width: 1000px;
+        max-width: 1600px;
         margin: 0 auto;
+        padding: 100px 20px 20px;
     }
 
     .community_content {
-        flex-direction: row;
-        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        max-width: 1600px;
+        margin: 0 auto;
+        margin-bottom: 100px;
+    }
+
+    .community_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 1000px;
+        padding-right: 40px;
     }
 
     .community h2 {
@@ -525,11 +607,16 @@ li {
     }
 
     /* ====== QUESTING & RUNESCAPE ====== */
-    .questing {
-        padding-top: 225px;
+    .runescape {
+        padding: 20px;
     }
 
-    .questing_content, .runescape {
+    .questing {
+        height: 100vh;
+        padding: 225px 20px 20px;
+    }
+
+    .questing_content, .runescape_content {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(1, 1fr);
