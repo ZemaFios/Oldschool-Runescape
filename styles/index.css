@@ -1,730 +1,753 @@
 @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-family: 'Inknut Antiqua', serif;
-    font-size: 0.625rem;
-    scroll-behavior: smooth;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 0.625rem;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-size: 1.6rem;
-    background-color: #16100B;
+  font-size: 1.6rem;
+  background-color: #16100b;
 }
 
 /* ====== NAVIGATION ====== */
 header {
-    width: 100%;
-    height: 11%;
-    display: flex;
-    position: fixed;
-    justify-content: space-between;
-    z-index: 1;
-    background-color: #1f1f29d8;
+  width: 100%;
+  height: 11%;
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  z-index: 1;
+  background-color: #1f1f29d8;
 }
 
 .logo_mobil {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .logo_mobil img {
-    position: absolute;
-    left: 15px;
-    top: 0;
-    width: 150px;
-    height: 90px;
+  position: absolute;
+  left: 15px;
+  top: 0;
+  width: 150px;
+  height: 90px;
 }
 
 .logo {
-    display: none;
+  display: none;
 }
 
 a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .nav_list {
-    display: none;
-    position: fixed;
-    background-color: #1f1f29d8;
-    width: 100%;
-    text-align: center;
-    gap: 30px;
+  display: none;
+  position: fixed;
+  background-color: #1f1f29d8;
+  width: 100%;
+  text-align: center;
+  gap: 30px;
 }
 
 li {
-    list-style: none;
-    font-size: 2rem;
+  list-style: none;
+  font-size: 2rem;
 }
 
 .nav_list.active {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    position: absolute;
-    align-items: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: absolute;
+  align-items: center;
 }
 
 .hamburger {
-    display: block;
-    cursor: pointer;
-    margin: 20px;
-    position: absolute;
-    right: 1%;
-    top: 10%;
+  display: block;
+  cursor: pointer;
+  margin: 20px;
+  position: absolute;
+  right: 1%;
+  top: 10%;
 }
 
 .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    background-color: white;
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: white;
 }
 
 .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
+  opacity: 0;
 }
 
 .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
 }
 
 .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
 }
 
-.nav_list>li:hover ul {
-    display: none;
-    position: absolute;
-    text-align: left;
-    max-width: fit-content;
-    padding: 20px;
-    background-color: #141414e5;
+.nav_list > li:hover ul {
+  display: none;
+  position: absolute;
+  text-align: left;
+  max-width: fit-content;
+  padding: 20px;
+  background-color: #141414e5;
 }
 /* ====== NAVIGATION END ====== */
 
 /* ====== HERO ====== */
 .hero {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.hero_content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
 }
 
 .hero video {
-    width: 100%;
-    object-fit: cover;
-    height: 100vh;
+  filter: brightness(0.7);
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+  height: 100vh;
 }
 
 .hero img {
-    min-width: 0 !important;
-    width: 80vw !important;
-    bottom: 50% !important;
+  margin-top: -200px;
+  min-width: 0 !important;
+  width: 80vw !important;
 }
 
 .hero h1 {
-    position: absolute;
-    text-align: center;
-    line-height: 4rem;
-    text-transform: uppercase;
-    width: 100%;
-    bottom: 50%;
-    font-size: 3rem;
-    color: white;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  font-size: 3rem;
+  color: white;
+  margin: 20px 0;
 }
 
 button {
-    position: absolute;
-    bottom: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #19db6d;
-    color: black;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 1.5rem;
-    font-family: 'Inknut Antiqua', serif;
-    font-weight: 600;
-    cursor: pointer;
-    text-transform: uppercase;
+  background-color: #19db6d;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  font-family: 'Inknut Antiqua', serif;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
 button:hover {
-    background-color: #06612d;
-    color: white;
+  background-color: #06612d;
+  color: white;
 }
 /* ====== HERO END ====== */
 
 /* ====== RUNESCAPE ====== */
 .runescape {
-    width: 100%;
-    height: 100%;
-    padding-top: 150px;
+  width: 100%;
+  height: 100%;
+  padding-top: 150px;
 }
 
 .runescape_content {
-    display: flex;
-    flex-direction: column-reverse;
-    background-color: #3d3d42;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: #3d3d42;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
 }
 
 .runescape h2 {
-    font-family: 'Inknut Antiqua', serif;
-    font-size: 2.7rem;
-    line-height: 40px;
-    margin: 10px 0 30px;
-    color: #f8c880;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 2.7rem;
+  line-height: 40px;
+  margin: 10px 0 30px;
+  color: #f8c880;
 }
 
 .runescape p {
-    font-family: 'Montserrat', sans-serif;
-    color: #e5e0df;
-    line-height: 1.5em;
+  font-family: 'Montserrat', sans-serif;
+  color: #e5e0df;
+  line-height: 1.5em;
 }
 
 .runescape_img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 /* ====== RUNESCAPE END ====== */
 
 /* ====== INTRODUCTION ====== */
 .introduction {
-    width: 100%;
-    height: 100%;
-    padding: 20px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
 }
 
 .introduction h2 {
-    font-family: 'Inknut Antiqua', serif;
-    color: #f8c880;
-    font-size: 3.5rem;
-    padding-top: 50px;
+  font-family: 'Inknut Antiqua', serif;
+  color: #f8c880;
+  font-size: 3.5rem;
+  padding-top: 50px;
 }
 
 .introduction_grid {
-    display: grid;
-    margin-top: 20px;
+  display: grid;
+  margin-top: 20px;
 }
 
 .introduction_content {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
 }
 
 .introduction_card {
-    width: 100%;
-    height: 100%;
-    background-color: #3d3d42;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: #3d3d42;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .introduction_card:nth-child(1) {
-    background-color: #2a2a2c;
+  background-color: #2a2a2c;
 }
 .introduction_card:nth-child(2) {
-    background-color: #333336;
+  background-color: #333336;
 }
 .introduction_card:nth-child(3) {
-    background-color: #3d3d41;
+  background-color: #3d3d41;
 }
 .introduction_card:nth-child(4) {
-    background-color: #4e4e52;
+  background-color: #4e4e52;
 }
 
 .introduction_card h3 {
-    font-family: 'Inknut Antiqua', serif;
-    font-size: 2rem;
-    line-height: 30px;
-    color: white;
-    margin-bottom: 10px;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 2rem;
+  line-height: 30px;
+  color: white;
+  margin-bottom: 10px;
 }
 
 .introduction_card p {
-    font-family: 'Montserrat', sans-serif;
-    color: #e5e0df;
-    line-height: 1.5em;
+  font-family: 'Montserrat', sans-serif;
+  color: #e5e0df;
+  line-height: 1.5em;
 }
 /* ====== INTRODUCTION END ====== */
 
 /* ====== GAMEPLAY MECHANICS ====== */
 .gameplay_mechanics {
-    width: 100%;
-    height: 100%;
-    padding: 20px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
 }
 
 .gameplay_mechanics h2 {
-    font-family: 'Inknut Antiqua', serif;
-    color: #f8c880;
-    font-size: 2.8rem;
-    margin-bottom: 20px;
+  font-family: 'Inknut Antiqua', serif;
+  color: #f8c880;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
 }
 
 .gameplay_mechanics_grid {
-    display: grid;
-    margin-top: 20px;
+  display: grid;
+  margin-top: 20px;
 }
 
 .gameplay_mechanics_content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .gameplay_mechanics_card {
-    width: 100%;
-    height: 100%;
-    background-color: #3d3d42;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: #3d3d42;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .gameplay_mechanics_card h3 {
-    font-family: 'Inknut Antiqua', serif;
-    font-size: 2rem;
-    line-height: 30px;
-    color: white;
-    margin-bottom: 10px;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 2rem;
+  line-height: 30px;
+  color: white;
+  margin-bottom: 10px;
 }
 
 .gameplay_mechanics_card p {
-    font-family: 'Montserrat', sans-serif;
-    color: #e5e0df;
-    line-height: 1.5em;
+  font-family: 'Montserrat', sans-serif;
+  color: #e5e0df;
+  line-height: 1.5em;
 }
 /* ====== GAMEPLAY MECHANICS END ====== */
 
 /* ====== EXPLORE ====== */
 .explore {
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 100px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 100px;
 }
 
 .explore h2 {
-    font-family: 'Inknut Antiqua', serif;
-    font-size: 2.3rem;
-    padding-top: 25px;
-    color: #f8c880;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 2.3rem;
+  padding-top: 25px;
+  color: #f8c880;
 }
 
 .explore_grid {
-    display: grid;
-    margin-top: 20px;
+  display: grid;
+  margin-top: 20px;
 }
 
 .explore_content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .explore_card {
-    width: 100%;
-    height: 100%;
-    background-color: #3d3d42;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: #3d3d42;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .explore_card h3 {
-    font-family: 'Inknut Antiqua', serif;
-    line-height: 30px;
-    margin-bottom: 10px;
-    color: white;
+  font-family: 'Inknut Antiqua', serif;
+  line-height: 30px;
+  margin-bottom: 10px;
+  color: white;
 }
 
 .explore_card p {
-    font-family: 'Montserrat', sans-serif;
-    color: #e5e0df;
-    line-height: 1.5em;
+  font-family: 'Montserrat', sans-serif;
+  color: #e5e0df;
+  line-height: 1.5em;
 }
 /* ====== EXPLORE END ====== */
 
 /* ====== COMMUNITY  ====== */
 .community {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }
 
 .community_content {
-    display: flex;
-    flex-direction: column-reverse;
-    background-color: #3d3d42;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: #3d3d42;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
 }
 
 .community h2 {
-    font-family: 'Inknut Antiqua', serif;
-    font-size: 2.7rem;
-    line-height: 30px;
-    margin: 10px 0 20px;
-    color: #f8c880;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 2.7rem;
+  line-height: 30px;
+  margin: 10px 0 20px;
+  color: #f8c880;
 }
 
 .community p {
-    font-family: 'Montserrat', sans-serif;
-    color: #e5e0df;
-    line-height: 1.5em;
+  font-family: 'Montserrat', sans-serif;
+  color: #e5e0df;
+  line-height: 1.5em;
 }
 
 .community_content img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 /* ====== COMMUNITY END ====== */
 
 /* ====== QUESTING ====== */
 .questing {
-    padding-top: 125px;
+  padding-top: 125px;
 }
 
 .questing_content {
-    display: flex;
-    flex-direction: column-reverse;
-    background-color: #3d3d42;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: #3d3d42;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
 }
 
 .questing h2 {
-    font-family: 'Inknut Antiqua', serif;
-    font-size: 2.5rem;
-    line-height: 50px;
-    margin: 10px 0 20px;
-    color: #f8c880;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 2.5rem;
+  line-height: 50px;
+  margin: 10px 0 20px;
+  color: #f8c880;
 }
 
 .questing p {
-    font-family: 'Montserrat', sans-serif;
-    color: #e5e0df;
-    line-height: 1.5em;
+  font-family: 'Montserrat', sans-serif;
+  color: #e5e0df;
+  line-height: 1.5em;
 }
 /* ====== QUESTING END ====== */
 
 /* ====== PROGRESSION ====== */
 .progression {
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 100px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 100px;
 }
 
 .progression h2 {
-    font-family: 'Inknut Antiqua', serif;
-    font-size: 2.7rem;
-    margin-bottom: 20px;
-    padding-top: 25px;
-    color: #f8c880;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 2.7rem;
+  margin-bottom: 20px;
+  padding-top: 25px;
+  color: #f8c880;
 }
 
 .progression_grid {
-    display: grid;
-    margin-top: 20px;
+  display: grid;
+  margin-top: 20px;
 }
 
 .progression_content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .progression_card {
-    width: 100%;
-    height: 100%;
-    background-color: #3d3d42;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: #3d3d42;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .progression_card h3 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'Inknut Antiqua', serif;
-    line-height: 30px;
-    margin-bottom: 10px;
-    color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Inknut Antiqua', serif;
+  line-height: 30px;
+  margin-bottom: 10px;
+  color: white;
 }
 
 .progression_card img {
-    width: 10%;
+  width: 10%;
 }
 
 .progression_card p {
-    font-family: 'Montserrat', sans-serif;
-    color: #e5e0df;
-    line-height: 1.5em;
+  font-family: 'Montserrat', sans-serif;
+  color: #e5e0df;
+  line-height: 1.5em;
 }
 
 /* ====== PROGRESSION END ====== */
 
 /* ====== MEDIA QUERY ====== */
 @media (min-width: 900px) {
+  /* ====== NAVIGATION ====== */
+  header {
+    height: 9vh;
+    z-index: 1000;
+  }
 
-    /* ====== NAVIGATION ====== */
-    header {
-        height: 9%;
-    }
-    
-    .nav_bar {
-        width: 100%;
-        max-width: 1400px;
-        margin: 0 auto;
-    }
-    
-    .nav_list {
-        max-width: 1400px;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        height: 9%;
-        padding-right: 20px;
-        background: none;
-    }
-    
-    li {
-        font-size: 1.6rem;
-    }
+  .nav_bar {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
 
-    li a:hover {
-        color: #dddd;
-    }
+  .nav_list {
+    max-width: 1400px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 9vh;
+    padding-right: 20px;
+    background: none;
+  }
 
-    .nav_list>li:hover ul {
-        display: block;
-    }
+  li {
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
 
-    .nav_list li ul li {
-        padding: 7px;
-        font-size: 1.5rem;
-    }
+  li a:hover {
+    color: #dddd;
+  }
 
-    .hamburger {
-        display: none;
-    }
+  .nav_list > li:hover ul {
+    display: block;
+  }
 
-    .logo {
-        display: block;
-    }
+  .nav_list li ul li {
+    padding: 7px;
+    font-size: 1.5rem;
+  }
 
-    .logo img {
-        position: absolute;
-        left: 1%;
-        top: 0;
-        width: 150px;
-        height: 90px;
-    }
+  .hamburger {
+    display: none;
+  }
 
-    .logo_mobil {
-        display: none;
-    }
+  .logo {
+    display: block;
+  }
 
-    /* ====== HERO ====== */
-    .hero video {
-        width: 100%;
-        height: 100%;
-        padding-bottom: 150px;
-    }
+  .logo img {
+    position: absolute;
+    left: 1%;
+    top: 0;
+    width: 150px;
+  }
 
-    .hero img {
-        min-width: 0 !important;
-        width: 600px !important;
-        bottom: 20%  !important;
-    }
+  .logo_mobil {
+    display: none;
+  }
 
-    .hero h1 {
-        font-size: 4rem;
-        bottom: 40%;
-    }
-    button {
-        bottom: 28%;
-        font-size: 2rem;
-    }
-    /* ====== INTRODUCTION & GAMEPLAY MECHANICS ====== */
-    .introduction {
-        max-width: 1400px;
-        margin: 0 auto;
-    }
+  /* ====== HERO ====== */
+  .hero video {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 150px;
+  }
 
-    .gameplay_mechanics {
-        max-width: 1400px;
-        margin: 0 auto;
-        margin-bottom: 100px;
-    }
+  .hero img {
+    min-width: 0 !important;
+    width: 600px !important;
+    bottom: 20% !important;
+  }
 
-    .introduction_content, .gameplay_mechanics_content {
-        flex-direction: row;
-        gap: 20px;
-    }
+  .hero h1 {
+    font-size: 4rem;
+    bottom: 40%;
+  }
+  button {
+    bottom: 28%;
+    font-size: 2rem;
+  }
+  /* ====== INTRODUCTION & GAMEPLAY MECHANICS ====== */
+  .introduction {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
 
-    .introduction h2, .gameplay_mechanics h2 {
-        font-size: 4rem;
-    }
+  .gameplay_mechanics {
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
 
-    .introduction_card h3, .gameplay_mechanics_card h3 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-    }
+  .introduction_content,
+  .gameplay_mechanics_content {
+    flex-direction: row;
+    gap: 20px;
+  }
 
-    .introduction_card p, .gameplay_mechanics_card p {
-        font-size: 1.5rem;
-    }
-    
-    /* ====== EXPLORE & PROGRESSION ====== */
-    .explore {
-        max-width: 1400px;
-        margin: 0 auto;
-        margin-bottom: 200px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .progression {
-        max-width: 1400px;
-        margin: 0 auto;
-        margin-bottom: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .introduction h2,
+  .gameplay_mechanics h2 {
+    font-size: 4rem;
+  }
 
-    .explore_content, .progression_content {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 20px;
-    }
+  .introduction_card h3,
+  .gameplay_mechanics_card h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
 
-    .explore_card:nth-child(1), .progression_card:nth-child(1) {
-        background-color: #2a2a2c;
-    }
+  .introduction_card p,
+  .gameplay_mechanics_card p {
+    font-size: 1.5rem;
+  }
 
-    .explore_card:nth-child(4), .progression_card:nth-child(4) {
-        background-color: #2a2a2c;
-    }
+  /* ====== EXPLORE & PROGRESSION ====== */
+  .explore {
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-bottom: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .progression_card:nth-child(5) {
-        background-color: #2a2a2c;
-    }
+  .progression {
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .explore h2, .progression h2 {
-        font-size: 4rem;
-        margin-bottom: 20px;
-    }
+  .explore_content,
+  .progression_content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+  }
 
-    .explore_card h3, .progression_card h3 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-    }
+  .explore_card:nth-child(1),
+  .progression_card:nth-child(1) {
+    background-color: #2a2a2c;
+  }
 
-    .explore_card p, .progression_card p {
-        font-size: 1.5rem;
-    }
+  .explore_card:nth-child(4),
+  .progression_card:nth-child(4) {
+    background-color: #2a2a2c;
+  }
 
-    .progression_card img {
-        width: 7%;
-    }   
+  .progression_card:nth-child(5) {
+    background-color: #2a2a2c;
+  }
 
-    /* ====== COMMUNITY ====== */
-    .community {
-        padding: 20px;
-        max-width: 1400px;
-        margin: 0 auto;
-    }
+  .explore h2,
+  .progression h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
 
-    .community_content {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(1, 1fr);
-        margin: 0 auto;
-        background-color: transparent;
-    }
+  .explore_card h3,
+  .progression_card h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
 
-    .community_text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        max-width: 1000px;
-        padding-right: 40px;
-    }
+  .explore_card p,
+  .progression_card p {
+    font-size: 1.5rem;
+  }
 
-    .community h2 {
-        font-size: 4rem;
-    }
+  .progression_card img {
+    width: 7%;
+  }
 
-    .community p {
-        font-size: 1.5rem;
-    }
+  /* ====== COMMUNITY ====== */
+  .community {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
 
-    /* ====== QUESTING & RUNESCAPE ====== */
-    .runescape {
-        padding: 20px;
-        max-width: 1400px;
-        margin: 0 auto;
-    }
+  .community_content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    margin: 0 auto;
+    background-color: #2a2a2c;
+  }
 
-    .questing {
-        padding: 225px 20px 20px;
-        max-width: 1400px;
-        margin: 0 auto;
-    }
+  .community_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1000px;
+    padding-right: 40px;
+  }
 
-    .questing_content, .runescape_content {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(1, 1fr);
-        max-width: 1600px;
-        margin: 0 auto;
-        margin-bottom: 100px;
-        background-color: transparent;
-    }
+  .community h2 {
+    font-size: 4rem;
+  }
 
-    .questing_text, .runescape_text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        max-width: 1000px;
-        padding-right: 40px;
-    }
+  .community p {
+    font-size: 1.5rem;
+  }
 
-    .questing h2, .runescape h2 {
-        font-size: 4rem;
-    }
+  /* ====== QUESTING & RUNESCAPE ====== */
+  .runescape {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
 
-    .questing p, .runescape p {
-        font-size: 1.5rem;
-    }
+  .questing {
+    padding: 225px 20px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
 
-    .questing_img, .runescape_img {
-        width: 100%;
-        height: 100%;
-    }
+  .questing_content,
+  .runescape_content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    max-width: 1600px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    background-color: #2a2a2c;
+  }
+
+  .questing_text,
+  .runescape_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1000px;
+    padding-right: 40px;
+  }
+
+  .questing h2,
+  .runescape h2 {
+    font-size: 4rem;
+  }
+
+  .questing p,
+  .runescape p {
+    font-size: 1.5rem;
+  }
+
+  .questing_img,
+  .runescape_img {
+    width: 100%;
+    height: 100%;
+  }
 }
